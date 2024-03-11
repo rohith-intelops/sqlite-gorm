@@ -47,6 +47,7 @@ func (userDao *UserDao) GetUser(id int64) (*models.User, error) {
 	}
 	log.Debugf("user retrieved")
 	return m, nil
+	
 }
 
 func (userDao *UserDao) UpdateUser(id int64, m *models.User) (*models.User, error) {
