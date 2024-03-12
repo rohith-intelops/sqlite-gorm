@@ -36,9 +36,7 @@ func main() {
 			}
 		}
 	}()
-	// add actuator
 	addActuator(router)
-	// add prometheus
 	addPrometheus(router)
 
 	userController, err := restcontrollers.NewUserController()
@@ -87,7 +85,7 @@ func addActuator(router *gin.Engine) {
 		actuator.Info,
 		actuator.Metrics,
 		actuator.Ping,
-		// actuator.Shutdown,
+	
 		actuator.ThreadDump,
 	},
 		Env:     "dev",

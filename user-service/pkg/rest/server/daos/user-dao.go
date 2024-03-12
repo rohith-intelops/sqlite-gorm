@@ -84,4 +84,5 @@ func (userDao *UserDao) DeleteUser(id int64) error {
 
 	log.Debugf("user deleted")
 	return nil
+	
 }
